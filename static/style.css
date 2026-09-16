@@ -1849,3 +1849,19 @@ input:focus,textarea:focus {
 
 /* Keep filtered cards hidden despite their grid/flex display rules. */
 [hidden] { display: none !important; }
+
+/* Batch preview stays readable on both desktop and phone. */
+.batch-item { margin: 20px 0; }
+.batch-item fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.batch-filename, .batch-status { overflow-wrap: anywhere; }
+.batch-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 20px; }
+.batch-fields .field { min-width: 0; }
+.batch-wide { grid-column: 1 / -1; }
+.batch-fields label { display: block; }
+.batch-fields input, .batch-fields textarea, #batch-files { width: 100%; min-width: 0; max-width: 100%; }
+.batch-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.batch-item fieldset:disabled { opacity: .65; }
+@media (max-width: 600px) {
+  .batch-fields { grid-template-columns: minmax(0, 1fr); }
+  .admin-tools { flex-wrap: wrap; }
+}

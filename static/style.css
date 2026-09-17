@@ -1462,7 +1462,7 @@ input:focus,textarea:focus {
     gap:18px;
     font-size:12px
   }
-  .about-link,.nav-divider {
+  .nav-divider {
     display:none
   }
   .nav-link {
@@ -1630,6 +1630,24 @@ input:focus,textarea:focus {
   }
   .error-state h1 {
     font-size:24px
+  }
+}
+@media(max-width:540px) {
+  .header-inner {
+    height:auto;
+    flex-wrap:wrap;
+    gap:0;
+    padding-top:14px
+  }
+  .header-inner nav {
+    width:100%;
+    justify-content:flex-end
+  }
+  .nav-link {
+    padding:14px 0
+  }
+  .nav-link.active:after {
+    bottom:6px
   }
 }
 @media(max-width:440px) {
@@ -1850,6 +1868,47 @@ input:focus,textarea:focus {
 /* Keep filtered cards hidden despite their grid/flex display rules. */
 [hidden] { display: none !important; }
 
+.install-prompt-section>p {
+  color:var(--muted);
+  font-size:13px
+}
+.install-prompt-section label {
+  display:block;
+  margin:18px 0 7px;
+  font-size:12px;
+  font-weight:700;
+  color:#675975
+}
+.install-prompt {
+  display:block;
+  width:100%;
+  min-width:0;
+  max-width:100%;
+  min-height:320px;
+  resize:vertical;
+  overflow-wrap:anywhere;
+  font-size:12px;
+  line-height:1.7;
+  color:#5f546c;
+  background:#fff
+}
+.prompt-copy {
+  margin-top:14px
+}
+.copy-status {
+  min-height:22px;
+  margin:9px 0 0
+}
+.prompt-preview-note {
+  border-left:3px solid var(--primary);
+  padding:10px 12px;
+  background:var(--lavender)
+}
+@media(max-width:440px) {
+  .install-prompt { min-height:390px }
+  .prompt-copy { width:100% }
+}
+
 /* Batch preview stays readable on both desktop and phone. */
 .batch-item { margin: 20px 0; }
 .batch-item fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
@@ -1864,4 +1923,30 @@ input:focus,textarea:focus {
 @media (max-width: 600px) {
   .batch-fields { grid-template-columns: minmax(0, 1fr); }
   .admin-tools { flex-wrap: wrap; }
+}
+
+/* Keep manual entry available without JavaScript. */
+.category-field .category-helper { display: none; }
+.category-options-ready .category-field .category-helper { display: block; margin-top: 10px; }
+.category-select { display: block; width: 100%; min-width: 0; max-width: 100%; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: white; color: inherit; font: inherit; }
+.category-select:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+
+/* Independent online-guide entry; no embedded document. */
+.guide-entry { margin-top:18px }
+.guide-page { max-width:760px; margin:0 auto 64px }
+.guide-page h1 { font-size:36px; margin:12px 0 }
+.guide-lead { color:var(--muted); margin-bottom:28px }
+.guide-document { padding:32px; border:1px solid var(--line); border-radius:20px; background:white }
+.guide-document h2 { font-size:25px; margin:22px 0 12px }
+.guide-document p { line-height:1.8 }
+.guide-document .button { margin-top:16px }
+.guide-document .guide-open-note { font-size:13px; color:var(--muted); margin:16px 0 0 }
+.guide-update-note { padding:24px 4px }
+.guide-update-note h2 { font-size:16px; margin:0 0 10px }
+.guide-update-note p { font-size:14px; color:var(--muted); line-height:1.8; margin:0 }
+@media(max-width:440px) {
+  .guide-page h1 { font-size:30px }
+  .guide-document { padding:24px }
+  .guide-document h2 { font-size:22px }
 }

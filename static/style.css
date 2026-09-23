@@ -1909,6 +1909,39 @@ input:focus,textarea:focus {
   .prompt-copy { width:100% }
 }
 
+.submission-page,.status-page { max-width:900px; margin:0 auto 70px }
+.submission-form { display:grid; gap:20px }
+.submission-items { display:grid; gap:16px }
+.submission-item { border:1px solid var(--line); border-radius:16px; background:white; padding:22px }
+.submission-item-heading { display:flex; gap:12px; align-items:center; margin-bottom:18px }
+.submission-filename { min-width:0; overflow-wrap:anywhere; flex:1 }
+.submission-item-state { color:var(--primary); font-size:11px; white-space:nowrap }
+.submission-fields { display:grid; grid-template-columns:1fr 1fr; gap:15px }
+.submission-fields .full-field { grid-column:1/-1 }
+.submission-receipt { margin-top:16px; padding:13px; border-radius:9px; background:var(--lavender); white-space:pre-wrap; overflow-wrap:anywhere; font-size:12px }
+.submitter-section { display:grid; gap:15px }
+.rights-confirm { display:flex; gap:10px; align-items:flex-start; font-size:13px; color:#675975 }
+.rights-confirm input { margin-top:5px }
+.query-result { min-height:28px; color:#675975; overflow-wrap:anywhere }
+.query-result a,.copy-status a { color:var(--primary); text-decoration:underline }
+.status-page .form-section { max-width:620px; margin-top:25px }
+.service-settings { margin:20px 0 }
+.service-settings summary { cursor:pointer; font-weight:700; margin-bottom:18px }
+.settings-form { display:grid; grid-template-columns:1fr 1fr; gap:15px }
+.settings-form .field:last-of-type { grid-column:1/-1 }
+.settings-form .button { justify-self:start }
+.submission-byline { margin-top:5px; color:var(--muted); font-size:11px }
+.submission-review-meta { display:grid; gap:6px; margin:-10px 0 25px; padding:18px; border:1px solid var(--line); border-radius:12px; background:white; overflow-wrap:anywhere; color:var(--muted); font-size:12px }
+.submission-review-meta strong { color:var(--ink); font-size:15px }
+.reject-form { margin:0 0 60px; max-width:760px }
+@media(max-width:640px) {
+  .submission-fields { grid-template-columns:1fr }
+  .submission-fields .full-field { grid-column:auto }
+  .submission-item { padding:18px }
+  .settings-form { grid-template-columns:1fr }
+  .settings-form .field:last-of-type { grid-column:auto }
+}
+
 /* Batch preview stays readable on both desktop and phone. */
 .batch-item { margin: 20px 0; }
 .batch-item fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
